@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using TicketManagementSystem.Interfaces;
 
 namespace TicketManagementSystem
 {
@@ -9,7 +10,6 @@ namespace TicketManagementSystem
 
         public static int CreateTicket(Ticket ticket)
         {
-            // Assume that the implementation of this method does not need to change.
             var currentHighestTicket = Tickets.Any() ? Tickets.Max(i => i.Id) : 0;
             var id = currentHighestTicket + 1;
             ticket.Id = id;
@@ -21,7 +21,6 @@ namespace TicketManagementSystem
 
         public static void UpdateTicket(Ticket ticket)
         {
-            // Assume that the implementation of this method does not need to change.
             var outdatedTicket = Tickets.FirstOrDefault(t => t.Id == ticket.Id);
 
             if (outdatedTicket != null)
@@ -33,7 +32,6 @@ namespace TicketManagementSystem
 
         public static Ticket GetTicket(int id)
         {
-            // Assume that the implementation of this method does not need to change.
             return Tickets.FirstOrDefault(a => a.Id == id);
         }
     }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
+using TicketManagementSystem.Interfaces;
 
 namespace TicketManagementSystem
 {
-    public class UserRepository : IDisposable
+    public class UserRepository : IDisposable, IUserRepository
     {
         public User GetUser(string username)
         {
-            // Assume this method does not need to change and is connected to a database with users populated.
             try
             {
                 var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["database"].ConnectionString;
@@ -35,7 +35,6 @@ namespace TicketManagementSystem
 
         public User GetAccountManager()
         {
-            // Assume this method does not need to change.
             return GetUser("Sarah");
         }
 

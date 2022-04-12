@@ -26,3 +26,14 @@ Note that while you can clone this repository, you cannot create a branch or com
 Try to limit time spent on this exercise to a maximum of 3 hours. If there is anything you don't have time to complete, write it down and we can discuss it during the interview.
 
 Good Luck!
+
+# Performed Test
+This test was performed by Philip Alderstig. Gothenburg, Sweden 2022-04-10
+
+##Actions Taken
+1. I started by looking through the code to get a general understanding of the project.
+2. I then removed comments i thought were ”unneccesary”.
+3. I renamed variables i thought were ”unclear” to make the code more easily readable and to make it easier to understand the functionality.
+4. I noticed repeated code/functionality and instead made it a method to make the code more easily readable and to reduce lines of code.
+5. I made interfaces for userRepository and ticketService (not to ticketRepository due to it being static) to facilitate future expansion of the project according to the Open / Closed principle and the Interface segregation principle.
+6. I divided files into corresponding folders to clean up and add structure to working tree.
